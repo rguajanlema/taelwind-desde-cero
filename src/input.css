@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+@keyframes rotarderechaizquierda{
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+/* aplicar a una clase */
+.animate-card{
+    animation: rotarderechaizquierda 1s ease-in-out infinite;
+}
+.content-main{
+    @apply h-screen bg-linear-to-b from-rose-400 to-pink-600 p-[20px] grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+}
